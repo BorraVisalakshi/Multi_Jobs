@@ -8,7 +8,7 @@ on:
     branches: [ main ]
  
 jobs:
-  build:
+  one:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,3 +20,8 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+  two:
+   runs-on: self-hosted
+   steps:
+   - name: Checkout the code
+     uses: actions/checkout@v2
